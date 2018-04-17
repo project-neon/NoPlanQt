@@ -17,7 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-SOURCES += main.cpp \
+SOURCES += \
     proto/messages_robocup_ssl_detection.pb.cc \
     proto/messages_robocup_ssl_geometry.pb.cc \
     proto/messages_robocup_ssl_geometry_legacy.pb.cc \
@@ -25,14 +25,15 @@ SOURCES += main.cpp \
     proto/messages_robocup_ssl_wrapper.pb.cc \
     proto/messages_robocup_ssl_wrapper_legacy.pb.cc \
     netraw.cpp \
-    robocup_ssl_client.cpp
+    robocup_ssl_client.cpp \
+    data_manager.cpp \
+    main.cpp
 
 SUBDIRS += \
     Data_Manager.pro
 
 DISTFILES += \
     proto/compile.sh \
-    proto/messages_robocup_ssl_detection.proto \
     proto/messages_robocup_ssl_geometry.proto \
     proto/messages_robocup_ssl_geometry_legacy.proto \
     proto/messages_robocup_ssl_refbox_log.proto \
@@ -48,4 +49,5 @@ HEADERS += \
     proto/messages_robocup_ssl_wrapper_legacy.pb.h \
     netraw.h \
     robocup_ssl_client.h \
-    util.h
+    util.h \
+    data_manager.h
