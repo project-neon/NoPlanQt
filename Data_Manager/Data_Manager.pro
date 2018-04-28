@@ -27,7 +27,8 @@ SOURCES += \
     netraw.cpp \
     robocup_ssl_client.cpp \
     data_manager.cpp \
-    main.cpp
+    main.cpp \
+    noplan_detection.cpp
 
 SUBDIRS += \
     Data_Manager.pro
@@ -50,4 +51,5 @@ HEADERS += \
     netraw.h \
     robocup_ssl_client.h \
     util.h \
-    data_manager.h
+    data_manager.h \
+    noplan_detection.h
