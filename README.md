@@ -14,10 +14,12 @@ New Version of the NoPlan Software in C++
   - Document the code in English
   - Use this pattern for documenting
 
+  ```c 
   ////  Documentation
 
-  Function calculator
+  void calculator(){}
   Outputs: expected to calculate 
   Dependencies: depends on this and that
 
   ////
+  ```
