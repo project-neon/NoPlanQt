@@ -23,7 +23,7 @@ int main(int argc, char **argv)
     {
         sleep(1);
         out << "oi, eu sou o goku! " << endl;
-        int teste = thread.detection.yellow_robots.at(0).x();
+        float teste = thread.detection.yellow_robots[0].orientation();
         out << teste << endl;
     }
 }

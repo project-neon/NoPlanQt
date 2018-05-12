@@ -10,9 +10,10 @@
 #include <unistd.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <math.h>
 #include <QTextStream>
 
-
+#include <vector>
 bool runApp = true;
 
 inline void Sleep(double sec)
@@ -36,27 +37,25 @@ void SSLVisionClientThread::run()
             if (packet.has_detection()) {
                 SSL_DetectionFrame rawDetection = packet.detection();
                 detection = noplan_detection();
-                if (orientation == left)
-                {
-                    int blue_team_size = rawDetection.robots_blue_size();
-                    std::vector<SSL_DetectionRobot>::iterator it = detection.blue_robots.begin();
-                    for (int i=0; i < blue_team_size; i++) {
-                        SSL_DetectionRobot robot = rawDetection.robots_blue(i);
+                int blue_team_size = rawDetection.robots_blue_size();
+                for (int i=0; i < blue_team_size; i++) {
+                    SSL_DetectionRobot robot = rawDetection.robots_blue(i);
+                    if (orientation == left){
                         robot.set_x(-robot.x());
                         robot.set_y(-robot.y());
-                        ++it;
-                        detection.blue_robots.insert(it, robot);
+                        robot.set_orientation(robot.orientation() + M_PI);
                     }
-
-                    int yellow_team_size = rawDetection.robots_yellow_size();
-                    it = detection.yellow_robots.begin();
-                    for (int i=0; i < yellow_team_size; i++) {
-                        SSL_DetectionRobot robot = rawDetection.robots_yellow(i);
+                    detection.blue_robots.push_back(robot);
+                }
+                int yellow_team_size = rawDetection.robots_yellow_size();
+                for (int i=0; i < yellow_team_size; i++) {
+                    SSL_DetectionRobot robot = rawDetection.robots_yellow(i);
+                    if (orientation == left){
                         robot.set_x(-robot.x());
                         robot.set_y(-robot.y());
-                        ++it;
-                        detection.yellow_robots.insert(it, robot);
+                        robot.set_orientation(robot.orientation() + M_PI);
                     }
+                    detection.yellow_robots.push_back(robot);
                 }
             }
             if (packet.has_geometry()) {

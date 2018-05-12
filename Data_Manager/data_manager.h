@@ -14,7 +14,7 @@ public:
     // RIGHT: do not reverse the coordinates
     // LEFT: reverse the coordinates
     enum FieldSide {right, left};
-    FieldSide orientation = left;
+    FieldSide orientation = right;
 
     enum Color {yellow, blue};
     Color color = blue;
