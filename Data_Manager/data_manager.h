@@ -13,11 +13,12 @@ public:
     noplan_detection detection;
     // RIGHT: do not reverse the coordinates
     // LEFT: reverse the coordinates
-    enum FieldSide {right, left};
-    FieldSide orientation = right;
+    enum FieldSide {RIGHT, LEFT};
+    FieldSide orientation = RIGHT;
 
-    enum Color {yellow, blue};
-    Color color = blue;
+    enum Color {YELLOW, BLUE};
+    Color color = BLUE;
+
     // é setter para a orientação do campo, sera chamado pela
     // interface quando houver troca de campo.
     void changeFieldSize(FieldSide orientation);

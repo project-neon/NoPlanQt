@@ -13,17 +13,20 @@
 
 QTextStream out(stdout);
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
+
     QApplication app(argc, argv);
     SSLVisionClientThread thread;
+
     thread.start();
 
-    while(true)
-    {
+    while(true) {
+
         sleep(1);
         out << "oi, eu sou o goku! " << endl;
         float teste = thread.detection.yellow_robots[0].orientation();
         out << teste << endl;
+
     }
+
 }
