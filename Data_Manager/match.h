@@ -13,9 +13,11 @@ public:
     Coach coach;
     // Looping de iteração onde o match ira enviar para o Coach
     SSLVisionClientThread *visionThread;
-    void loop();
+    void loop(noplan_detection detection);
     // Inicialização de parametros iniciais referentes a partida
     void setup();
+    // Define o coach e já faz inicialização se preciso
+    void define_coach(Coach coach);
 };
 
 #endif // MATCH_H
