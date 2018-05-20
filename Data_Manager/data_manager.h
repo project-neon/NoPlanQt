@@ -1,6 +1,8 @@
 #ifndef DATA_MANAGER_H
 #define DATA_MANAGER_H
 #include "noplan_detection.h"
+#include "commons.h"
+#include <QThread>
 
 class SSLVisionClientThread : public QThread
 {
@@ -11,18 +13,13 @@ public:
     ~SSLVisionClientThread(){}
 
     noplan_detection detection;
-    // RIGHT: do not reverse the coordinates
-    // LEFT: reverse the coordinates
-    enum FieldSide {RIGHT, LEFT};
-    FieldSide orientation = RIGHT;
-
-    enum Color {YELLOW, BLUE};
-    Color color = BLUE;
+    Commons::FieldSide orientation = Commons::RIGHT;
+    Commons::Color color = Commons::BLUE;
 
     // é setter para a orientação do campo, sera chamado pela
     // interface quando houver troca de campo.
-    void changeFieldSize(FieldSide orientation);
-    void setTeamColor(Color color);
+    void changeFieldSize(Commons::FieldSide orientation);
+    void setTeamColor(Commons::Color color);
 
 };
 

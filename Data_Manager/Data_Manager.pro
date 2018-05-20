@@ -28,13 +28,15 @@ SOURCES += \
     robocup_ssl_client.cpp \
     data_manager.cpp \
     main.cpp \
-    noplan_detection.cpp
+    noplan_detection.cpp \
+    dummy_match.cpp
 
 SUBDIRS += \
     Data_Manager.pro
 
 DISTFILES += \
     proto/compile.sh \
+    proto/messages_robocup_ssl_detection.proto \
     proto/messages_robocup_ssl_geometry.proto \
     proto/messages_robocup_ssl_geometry_legacy.proto \
     proto/messages_robocup_ssl_refbox_log.proto \
@@ -52,4 +54,9 @@ HEADERS += \
     robocup_ssl_client.h \
     util.h \
     data_manager.h \
-    noplan_detection.h
+    noplan_detection.h \
+    match.h \
+    commons.h \
+    coach.h \
+    transmission.h \
+    player.h

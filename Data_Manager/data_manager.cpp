@@ -13,6 +13,7 @@
 #include "robocup_ssl_client.h"
 #include "noplan_detection.h"
 #include "data_manager.h"
+#include "commons.h"
 
 bool run_app = true;
 
@@ -20,7 +21,7 @@ inline void Sleep(double sec) {
    usleep((int)(sec * 1E6));
 }
 
-void SSLVisionClientThread::setTeamColor(Color color) {
+void SSLVisionClientThread::setTeamColor(Commons::Color color) {
     this->color = color;
 }
 
@@ -46,7 +47,7 @@ void SSLVisionClientThread::run() {
                 for (int i=0; i < blue_team_size; i++) {
 
                     SSL_DetectionRobot robot = rawDetection.robots_blue(i);
-                    if (orientation == LEFT) {
+                    if (orientation == Commons::LEFT) {
 
                         robot.set_x(-robot.x());
                         robot.set_y(-robot.y());
@@ -62,7 +63,7 @@ void SSLVisionClientThread::run() {
                 for (int i=0; i < yellow_team_size; i++) {
 
                     SSL_DetectionRobot robot = rawDetection.robots_yellow(i);
-                    if (orientation == LEFT) {
+                    if (orientation == Commons::LEFT) {
 
                         robot.set_x(-robot.x());
                         robot.set_y(-robot.y());
