@@ -11,8 +11,6 @@
 #include <stdio.h>
 #include <QTextStream>
 
-QTextStream out(stdout);
-
 //int main(int argc, char **argv) {
 
 //    QApplication app(argc, argv);

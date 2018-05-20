@@ -8,7 +8,7 @@ class Match
 {
 public:
     // Cor no nosso time
-    Commons::Color team_color = Commons::BLUE;
+    Commons::Color team_color = Commons::YELLOW;
     // Implementação do coach
     Coach coach;
     // Looping de iteração onde o match ira enviar para o Coach
