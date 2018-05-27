@@ -43,6 +43,8 @@ void SSLVisionClientThread::run() {
                 SSL_DetectionFrame rawDetection = packet.detection();
                 detection = noplan_detection();
 
+                detection.ball = rawDetection.balls(0);
+
                 int blue_team_size = rawDetection.robots_blue_size();
                 for (int i=0; i < blue_team_size; i++) {
 
