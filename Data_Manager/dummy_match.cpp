@@ -27,7 +27,22 @@ public:
     }
     // Faz iteração do Coach
     void loop(noplan_detection *detection) {
-        out << detection->ball.x() << endl;
+        try {
+            out << "ball:" << detection->ball.x() << "," << detection->ball.y() << endl;
+            std::vector<SSL_DetectionRobot> *our_robots;
+            if(this->team_color == Commons::BLUE) {
+                our_robots = &detection->blue_robots;
+            }
+            else{
+                out << detection->yellow_robots.size() << endl;
+                our_robots = &detection->yellow_robots;
+            }
+            for(int i=0; i<our_robots->size(); i++) {
+                SSL_DetectionRobot robot = (*our_robots)[i];
+                players[robot.robot_id()] = robot;
+                out << "robot " << robot.robot_id() << ":" << players[robot.robot_id()].x() << "," << players[robot.robot_id()].y() << endl;
+            }
+        } catch (exception error) {}
     }
     // Cria o coach e recebe dados da UI
     void setup() {
@@ -53,9 +68,7 @@ int main(int argc, char **argv)
     my_match.define_coach(my_coach, &vision_thread.detection);
     while (true)
     {
-        // TODO: |not working, tries to solve possible pointers
-        // TODO: |or create a getter for detection object.
         my_match.loop(&vision_thread.detection);
-
     }
+    out << "ISSO NAO DEVIA ACONTECER!" << endl;
 }
