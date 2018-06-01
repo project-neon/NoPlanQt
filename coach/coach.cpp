@@ -1,6 +1,5 @@
 #include "detection/noplan_detection.h"
 #include "coach/coach.h"
-#include <exception>
 
 void Coach::create_robots(noplan_detection detection) {
     throw "Not Implemented yet";

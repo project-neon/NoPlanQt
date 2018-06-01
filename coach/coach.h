@@ -31,14 +31,38 @@ public:
     }
 };
 
+
+// this is a forward declarations for coach since Play and Coach refers to
+// each other
+class Coach;
+
+class Play {
+public:
+    virtual void delegate_roles(Coach *coach)=0;
+};
+
 class Coach
 {
 public:
     virtual void create_robots(noplan_detection detection)=0;
     virtual void send_transmission()=0;
     virtual void update(noplan_detection detection)=0;
+
+    // for each robot in 'player_positions' with a position given by 'actual_play'
+    // run the decision making of each robot and return a hash with robot_id -> RobotTask,
+    // being robotTask a plain object to encapsulate the move command to the robot.
     virtual QHash<int, RobotTask> make_decisions()=0;
-private:
-    std::vector<Player> players;
+    virtual void decide_play()=0;
+
+    // hash with: robot_id -> name_position, easy way to debug.
+    QHash<int, string> player_positions;
+    // hash with: robot_id -> detection, will be used for the decision-making methods
+    QHash<int, SSL_DetectionRobot> our_robots;
+    // list with: detection, list with oponent robots, will be used for the decision-making methods
+    QList<SSL_DetectionRobot> their_robots;
+    // self-explained
+    SSL_DetectionBall ball;
+    // actual play that coach is considering
+    Play *actual_play;
 };
 #endif // COACH_H

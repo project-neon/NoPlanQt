@@ -27,7 +27,10 @@ SOURCES += \
     detection/robocup_ssl_client.cpp \
     detection/data_manager.cpp \
     detection/noplan_detection.cpp \
+    coach/coach.cpp \
     main.cpp \
+    match/match.cpp \
+    play/simplePlay.cpp \
     dummy_match.cpp
 
 SUBDIRS += \
@@ -54,8 +57,9 @@ HEADERS += \
     detection/util.h \
     detection/data_manager.h \
     detection/noplan_detection.h \
+    transmission/transmission.h \
+    coach/coach.h \
+    positions/position.h \
     match/match.h \
     commons.h \
-    coach/coach.h \
-    transmission/transmission.h \
-    player.h
+    player.h \
