@@ -4,6 +4,7 @@
 #include "detection/noplan_detection.h"
 #include <vector>
 #include <QHash>
+#include "commons.h"
 
 class RobotTask
 {
@@ -44,9 +45,8 @@ public:
 class Coach
 {
 public:
-    virtual void create_robots(noplan_detection detection)=0;
     virtual void send_transmission()=0;
-    virtual void update(noplan_detection detection)=0;
+    virtual void update(noplan_detection *detection, Commons::Color team_color)=0;
 
     // for each robot in 'player_positions' with a position given by 'actual_play'
     // run the decision making of each robot and return a hash with robot_id -> RobotTask,

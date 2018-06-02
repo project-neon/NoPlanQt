@@ -3,6 +3,7 @@
 #include <QApplication>
 #include <QHash>
 #include <QTextStream>
+#include <play/simplePlay.cpp>
 
 QTextStream out(stdout);
 
@@ -27,6 +28,7 @@ public:
     }
     // Faz iteração do Coach
     void loop(noplan_detection *detection) {
+        /*
         out << "ball:" << detection->ball.x() << "," << detection->ball.y() << endl;
         std::vector<SSL_DetectionRobot> *our_robots;
         if(this->team_color == Commons::BLUE) {
@@ -39,6 +41,8 @@ public:
             SSL_DetectionRobot robot = (*our_robots)[i];
             players[robot.robot_id()] = robot;
         }
+        */
+        this->coach->update(detection, team_color);
 
         QHash<int, RobotTask> decisions = this->coach->make_decisions();
     }
@@ -50,17 +54,50 @@ public:
 
 class DummyCoach : public Coach {
 public:
-    void create_robots(noplan_detection detection) {
+    SimplePlay simplePlay;
 
+    DummyCoach() {
+        simplePlay = SimplePlay();
     }
 
-    void send_transmission(){}
+    void update(noplan_detection *detection, Commons::Color team_color){
 
-    void update(noplan_detection detection){}
+        this->ball = detection->ball;
+
+        std::vector<SSL_DetectionRobot> *our_robots_list;
+        std::vector<SSL_DetectionRobot> *their_robots_list;
+        if(team_color == Commons::BLUE) {
+            our_robots_list = &detection->blue_robots;
+            their_robots_list = &detection->yellow_robots;
+        }
+        else{
+            our_robots_list = &detection->yellow_robots;
+            their_robots_list = &detection->blue_robots;
+        }
+
+        for(int i=0; i<our_robots_list->size(); i++) {
+            SSL_DetectionRobot robot = (*our_robots_list)[i];
+            this->our_robots[robot.robot_id()] = robot;
+        }
+
+        for(int i=0; i<their_robots_list->size(); i++) {
+            SSL_DetectionRobot robot = (*our_robots_list)[i];
+            this->their_robots.append(robot);
+        }
+
+
+    }
 
     QHash<int, RobotTask> make_decisions() {
         QHash<int, RobotTask> decision;
         return decision;
+    }
+
+    void decide_play() {
+        this->actual_play = &simplePlay;
+    }
+
+    void send_transmission() {
     }
 };
 
