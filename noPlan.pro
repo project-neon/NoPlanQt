@@ -59,7 +59,6 @@ HEADERS += \
     detection/noplan_detection.h \
     transmission/transmission.h \
     coach/coach.h \
-    positions/position.h \
     match/match.h \
     commons.h \
     player.h \

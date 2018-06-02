@@ -32,6 +32,12 @@ public:
     }
 };
 
+class Position{
+    RobotTask calculate(SSL_DetectionRobot robot, QHash<int, SSL_DetectionRobot> our_robots,
+                        QList<SSL_DetectionRobot> their_robots, SSL_DetectionBall ball){
+        return RobotTask(robot.robot_id(), true, 0, 0);
+    }
+};
 
 // this is a forward declarations for coach since Play and Coach refers to
 // each other
@@ -55,7 +61,7 @@ public:
     virtual void decide_play()=0;
 
     // hash with: robot_id -> name_position, easy way to debug.
-    QHash<int, string> player_positions;
+    QHash<int, Position> player_positions;
     // hash with: robot_id -> detection, will be used for the decision-making methods
     QHash<int, SSL_DetectionRobot> our_robots;
     // list with: detection, list with oponent robots, will be used for the decision-making methods

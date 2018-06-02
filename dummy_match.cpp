@@ -28,21 +28,11 @@ public:
     }
     // Faz iteração do Coach
     void loop(noplan_detection *detection) {
-        /*
-        out << "ball:" << detection->ball.x() << "," << detection->ball.y() << endl;
-        std::vector<SSL_DetectionRobot> *our_robots;
-        if(this->team_color == Commons::BLUE) {
-            our_robots = &detection->blue_robots;
-        }
-        else{
-            our_robots = &detection->yellow_robots;
-        }
-        for(int i=0; i<our_robots->size(); i++) {
-            SSL_DetectionRobot robot = (*our_robots)[i];
-            players[robot.robot_id()] = robot;
-        }
-        */
         this->coach->update(detection, team_color);
+
+        this->coach->decide_play();
+
+        this->coach->actual_play->delegate_roles(this->coach);
 
         QHash<int, RobotTask> decisions = this->coach->make_decisions();
     }
@@ -84,8 +74,6 @@ public:
             SSL_DetectionRobot robot = (*our_robots_list)[i];
             this->their_robots.append(robot);
         }
-
-
     }
 
     QHash<int, RobotTask> make_decisions() {
