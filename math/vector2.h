@@ -17,10 +17,12 @@ public:
     static Vector2 sum(Vector2 v1, Vector2 v2);
     static Vector2 sub(Vector2 v1, Vector2 v2);
     static Vector2 mult(Vector2 v1, Vector2 v2);
+    static Vector2 mult(Vector2 v1, float f);
     static Vector2 div(Vector2 v1, Vector2 v2);
     static Vector2 fromTheta(float theta);
     static float angle(Vector2 v1, Vector2 v2);
     static float angleBetween(Vector2 v1, Vector2 v2);
     static float angleBetween(Vector2 v1, float theta);
+    static Vector2 rotate(Vector2 v1, float theta);
 
 };
