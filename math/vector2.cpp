@@ -32,22 +32,22 @@ Vector2 Vector2::Normalize() {
 
 Vector2::~Vector2(void) {}
 
-static float sum(Vector2 v1, Vector2 v2) {
-    return Vector2 (v1.x + v2.x, v1.y + v2.y);
+static Vector2 sum(Vector2 v1, Vector2 v2) {
+    return Vector2 (v1.X + v2.X, v1.Y + v2.Y);
 }
-static float sub(Vector2 v1, Vector2 v2) {
-    return Vector2 (v1.x - v2.x, v1.y - v2.y);
+static Vector2 sub(Vector2 v1, Vector2 v2) {
+    return Vector2 (v1.X - v2.X, v1.Y - v2.Y);
 }
-static float mult(Vector2 v1, Vector2 v2) {
-    return Vector2 (v1.x * v2.x, v1.y * v2.y);
+static Vector2 mult(Vector2 v1, Vector2 v2) {
+    return Vector2 (v1.X * v2.X, v1.Y * v2.Y);
 }
-static float div(Vector2 v1, Vector2 v2) {
-    return Vector2 (v1.x / v2.x, v1.y / v2.y);
+static Vector2 div(Vector2 v1, Vector2 v2) {
+    return Vector2 (v1.X / v2.X, v1.Y / v2.Y);
 }
 //Theta has to be in radians
-static float fromTheta(float theta) {
-    return Vector2 (qCos(theta), qSin(theta));
+static Vector2 fromTheta(float theta) {
+    return Vector2 (cos(theta), sin(theta));
 }
 static float angle(Vector2 v1) {
-    return qAtan2(v1.x, v1.y);
+    return atan2(v1.X, v1.Y);
 }

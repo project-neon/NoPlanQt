@@ -1,7 +1,6 @@
 #pragma once
 
 #include <math.h>
-#include <QtMath>
 
 class Vector2 {
 public:
@@ -15,11 +14,11 @@ public:
     float Length();
     Vector2 Normalize();
 
-    static float sum(Vector2 v1, Vector2 v2);
-    static float sub(Vector2 v1, Vector2 v2);
-    static float mult(Vector2 v1, Vector2 v2);
-    static float div(Vector2 v1, Vector2 v2);
-    static float fromTheta(float theta);
+    static Vector2 sum(Vector2 v1, Vector2 v2);
+    static Vector2 sub(Vector2 v1, Vector2 v2);
+    static Vector2 mult(Vector2 v1, Vector2 v2);
+    static Vector2 div(Vector2 v1, Vector2 v2);
+    static Vector2 fromTheta(float theta);
     static float angle(Vector2 v1, Vector2 v2);
     static float angleBetween(Vector2 v1, Vector2 v2);
     static float angleBetween(Vector2 v1, float theta);
