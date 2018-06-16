@@ -4,7 +4,8 @@
 #include "coach/coach.h"
 
 #include <QString>
-#include <boost/array.hpp>
+
+#include <math/vector2.h>
 
 
 class Intetion{
@@ -14,8 +15,7 @@ public:
 
     Intetion(QString name, float weight);
 
-    RobotTask compute(boost::array<int, 2> position, float orientation);
-
+    RobotTask compute(Vector2 position, float orientation);
 };
 
 #endif

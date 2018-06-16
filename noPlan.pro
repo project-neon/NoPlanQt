@@ -32,7 +32,8 @@ SOURCES += \
     match/match.cpp \
     play/simplePlay.cpp \
     dummy_match.cpp \
-    intention/PointIntetion.cpp
+    intention/PointIntetion.cpp \
+    math/vector2.cpp
 
 SUBDIRS += \
     noPlan.pro
@@ -64,4 +65,6 @@ HEADERS += \
     match/match.h \
     commons.h \
     player.h \
-    intention/intention.h
+    intention/intention.h \
+    math/vector2.h \
+    stdafx.h
