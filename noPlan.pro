@@ -31,7 +31,8 @@ SOURCES += \
     main.cpp \
     match/match.cpp \
     play/simplePlay.cpp \
-    dummy_match.cpp
+    dummy_match.cpp \
+    intention/PointIntetion.cpp
 
 SUBDIRS += \
     noPlan.pro
@@ -43,7 +44,8 @@ DISTFILES += \
     proto/messages_robocup_ssl_geometry_legacy.proto \
     proto/messages_robocup_ssl_refbox_log.proto \
     proto/messages_robocup_ssl_wrapper.proto \
-    proto/messages_robocup_ssl_wrapper_legacy.proto
+    proto/messages_robocup_ssl_wrapper_legacy.proto \
+    README.md
 
 HEADERS += \
     proto/messages_robocup_ssl_detection.pb.h \
@@ -62,3 +64,4 @@ HEADERS += \
     match/match.h \
     commons.h \
     player.h \
+    intention/intention.h
