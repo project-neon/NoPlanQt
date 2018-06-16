@@ -34,7 +34,7 @@ public:
 
         this->coach->actual_play->delegate_roles(this->coach);
 
-        QHash<int, RobotTask> decisions = this->coach->make_decisions();
+        QHash<int, RobotTask*> decisions = this->coach->make_decisions();
     }
     // Cria o coach e recebe dados da UI
     void setup() {
@@ -76,8 +76,20 @@ public:
         }
     }
 
-    QHash<int, RobotTask> make_decisions() {
-        QHash<int, RobotTask> decision;
+    QHash<int, RobotTask*> make_decisions() {
+        QHash<int, RobotTask*> decision;
+        for(QHash<int, SSL_DetectionRobot>::iterator i=this->our_robots.begin();i!=this->our_robots.end();++i)
+        {
+            SSL_DetectionRobot robot_detection = (i.value());
+            int robot_id = (i.key());
+            RobotTask task = this->player_positions[robot_id].calculate(
+                        &robot_detection, &this->our_robots, &this->their_robots, &this->ball
+            );
+
+            decision[robot_id] = &task;
+            decision[robot_id]->debug_message();
+        }
+
         return decision;
     }
 

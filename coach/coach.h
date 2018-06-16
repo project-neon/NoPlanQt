@@ -6,6 +6,10 @@
 #include <QHash>
 #include "commons.h"
 
+#include <iostream>
+#include <QString>
+#include <QDebug>
+
 class RobotTask
 {
 public:
@@ -14,11 +18,16 @@ public:
     float linear_speed;
     float theta_speed;
 
-    RobotTask(int robot_id, bool state, float linear_speed, float theta_speed) {
-        this->robot_id = robot_id;
-        this->state = state;
-        this->linear_speed = linear_speed;
-        this->theta_speed = theta_speed;
+    RobotTask(int robot_id, bool state, float linear_speed, float theta_speed) : robot_id(robot_id), state(state), linear_speed(linear_speed), theta_speed(theta_speed) {
+//        this->robot_id = robot_id;
+//        this->state = state;
+//        this->linear_speed = linear_speed;
+//        this->theta_speed = theta_speed;
+    }
+
+    void debug_message() {
+        QString message = "linear speed:" + QString::number(this->linear_speed) + "; theta speed:"  + QString::number(this->theta_speed);
+        qDebug() << message;
     }
 
     string make_message(){
@@ -33,9 +42,11 @@ public:
 };
 
 class Position{
-    RobotTask calculate(SSL_DetectionRobot robot, QHash<int, SSL_DetectionRobot> our_robots,
-                        QList<SSL_DetectionRobot> their_robots, SSL_DetectionBall ball){
-        return RobotTask(robot.robot_id(), true, 0, 0);
+public:
+    string name = "dumbPosition";
+    RobotTask calculate(SSL_DetectionRobot *robot, QHash<int, SSL_DetectionRobot> *our_robots,
+                        QList<SSL_DetectionRobot> *their_robots, SSL_DetectionBall *ball){
+        return RobotTask(robot->robot_id(), true, 0.f, 0.f);
     }
 };
 
@@ -57,7 +68,7 @@ public:
     // for each robot in 'player_positions' with a position given by 'actual_play'
     // run the decision making of each robot and return a hash with robot_id -> RobotTask,
     // being robotTask a plain object to encapsulate the move command to the robot.
-    virtual QHash<int, RobotTask> make_decisions()=0;
+    virtual QHash<int, RobotTask *> make_decisions()=0;
     virtual void decide_play()=0;
 
     // hash with: robot_id -> name_position, easy way to debug.
