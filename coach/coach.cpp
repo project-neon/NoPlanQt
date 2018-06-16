@@ -6,10 +6,10 @@ void Coach::send_transmission() {
     throw "Not Implemented yet";
 }
 
-void Coach::update(noplan_detection detection, Commons::Color team_color) {
+void Coach::update(noplan_detection* detection, Commons::Color team_color) {
     throw "Not Implemented yet";
 }
 
-QHash<int, RobotTask> Coach::make_decisions() {
+QHash<int, RobotTask *> Coach::make_decisions() {
     throw "Not Implemented yet";
 }
