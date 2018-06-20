@@ -1,7 +1,6 @@
 QT += gui
 
 CONFIG += c++11 console
-CONFIG -= app_bundle
 
  QT += widgets
 
@@ -24,15 +23,20 @@ SOURCES += \
     proto/messages_robocup_ssl_refbox_log.pb.cc \
     proto/messages_robocup_ssl_wrapper.pb.cc \
     proto/messages_robocup_ssl_wrapper_legacy.pb.cc \
-    netraw.cpp \
-    robocup_ssl_client.cpp \
-    data_manager.cpp \
+    detection/netraw.cpp \
+    detection/robocup_ssl_client.cpp \
+    detection/data_manager.cpp \
+    detection/noplan_detection.cpp \
+    coach/coach.cpp \
     main.cpp \
-    noplan_detection.cpp \
-    dummy_match.cpp
+    match/match.cpp \
+    play/simplePlay.cpp \
+    dummy_match.cpp \
+    intention/PointIntetion.cpp \
+    math/vector2.cpp
 
 SUBDIRS += \
-    Data_Manager.pro
+    noPlan.pro
 
 DISTFILES += \
     proto/compile.sh \
@@ -41,7 +45,8 @@ DISTFILES += \
     proto/messages_robocup_ssl_geometry_legacy.proto \
     proto/messages_robocup_ssl_refbox_log.proto \
     proto/messages_robocup_ssl_wrapper.proto \
-    proto/messages_robocup_ssl_wrapper_legacy.proto
+    proto/messages_robocup_ssl_wrapper_legacy.proto \
+    README.md
 
 HEADERS += \
     proto/messages_robocup_ssl_detection.pb.h \
@@ -50,13 +55,16 @@ HEADERS += \
     proto/messages_robocup_ssl_refbox_log.pb.h \
     proto/messages_robocup_ssl_wrapper.pb.h \
     proto/messages_robocup_ssl_wrapper_legacy.pb.h \
-    netraw.h \
-    robocup_ssl_client.h \
-    util.h \
-    data_manager.h \
-    noplan_detection.h \
-    match.h \
+    detection/netraw.h \
+    detection/robocup_ssl_client.h \
+    detection/util.h \
+    detection/data_manager.h \
+    detection/noplan_detection.h \
+    transmission/transmission.h \
+    coach/coach.h \
+    match/match.h \
     commons.h \
-    coach.h \
-    transmission.h \
-    player.h
+    player.h \
+    intention/intention.h \
+    math/vector2.h \
+    stdafx.h

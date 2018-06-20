@@ -2,8 +2,8 @@
 #include <QtGui>
 #include <QApplication>
 
-#include "robocup_ssl_client.h"
-#include "data_manager.h"
+#include "detection/robocup_ssl_client.h"
+#include "detection/data_manager.h"
 #include <sys/types.h>
 #include <signal.h>
 #include <unistd.h>
