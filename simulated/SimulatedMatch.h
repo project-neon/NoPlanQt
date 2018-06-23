@@ -43,7 +43,7 @@ public:
     void update(QString message);
     void pause();
     void invert_team_side();
-    void update_score(Robot::RobotTeamColor team);
+    void update_score(Commons::Color team);
     int translate_position_x(int x);
     int translate_position_y(int y);
 

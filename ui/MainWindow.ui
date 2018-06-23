@@ -38,25 +38,6 @@
      <string notr="true">border: 1px solid #2AC652;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_great_green_panel">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>0</y>
-      <width>621</width>
-      <height>351</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: #1D913B;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="lbl_timer">
     <property name="geometry">
      <rect>
@@ -455,6 +436,9 @@ border: 1px solid #2AC652;</string>
      </property>
     </widget>
     <widget class="QPlainTextEdit" name="txt_rb1_role">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>83</x>
@@ -1368,6 +1352,16 @@ QComboBox#cmb_color::drop-down::down-arrow{
     </property>
     <property name="text">
      <string>Console</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="simulated_match">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>0</y>
+      <width>621</width>
+      <height>361</height>
+     </rect>
     </property>
    </widget>
   </widget>

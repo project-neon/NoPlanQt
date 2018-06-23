@@ -7,10 +7,9 @@
 #include <QDebug>
 #include <QTextStream>
 #include <QTimer>
-#include <QtMath>
+//#include <QMath>
 #include <cmath>
-
-#include "Commons.h"
+#include "commons.h"
 
 class Robot : public QObject, public QGraphicsPixmapItem {
 
@@ -34,14 +33,14 @@ public:
     int m_x;
     int m_y;
 
-    RobotTeamColor team;
-    Sizes size;
+    Commons::Color team;
+    Commons::Sizes size;
 
     float linear_speed;
     float theta_speed;
 
 
-    Robot(QGraphicsPixmapItem *parent = 0, int id = 0, bool state = 0, int m_x = 0, int m_y = 0, RobotTeamColor team = RobotTeamColor::BLUE, Sizes size = Sizes::VERY_SMALL, float linear_speed = 0, float theta_speed = 0);
+    Robot(QGraphicsPixmapItem *parent = 0, int id = 0, bool state = 0, int m_x = 0, int m_y = 0, Commons::Color team = Commons::BLUE, Commons::Sizes size = Commons::VERY_SMALL, float linear_speed = 0, float theta_speed = 0);
     ~Robot();
 
     int get_id() const;

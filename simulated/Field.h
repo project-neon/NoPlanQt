@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QPixmap>
 
-#include "Commons.h"
+#include "../commons.h"
 
 class Field : public QObject, public QGraphicsPixmapItem {
 

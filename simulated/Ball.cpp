@@ -1,6 +1,6 @@
 #include "Ball.h"
 
-Ball::Ball(QGraphicsPixmapItem *parent, int id, int x, int y, int speed, Sizes size)
+Ball::Ball(QGraphicsPixmapItem *parent, int id, int x, int y, int speed, Commons::Sizes size)
     : QObject(), QGraphicsPixmapItem(parent), id(id), x(x), y(y), speed(speed), size(size) {
 
     QString tmp = QString(":/img/balls/ball_")

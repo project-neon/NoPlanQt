@@ -1,8 +1,12 @@
 #include <QFont>
 #include <QFontDatabase>
 
+#include <simulated/SimulatedMatch.h>
+
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
+
+SimulatedMatch* match;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -18,6 +22,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     QStringList sides =(QStringList() << "Selecione uma opção" << "Right" << "Left");
     ui->cmb_side->addItems(sides);*/
 
+    match = new SimulatedMatch();
+    QGraphicsScene* scene = match->scene;
+    ui->simulated_match->setScene(scene);
 }
 
 MainWindow::~MainWindow() {

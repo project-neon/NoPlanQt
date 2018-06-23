@@ -1,11 +1,11 @@
 #include "Robot.h"
 
-Robot::Robot(QGraphicsPixmapItem *parent, int id, bool state, int m_x, int m_y, RobotTeamColor team, Sizes size, float linear_speed, float theta_speed)
+Robot::Robot(QGraphicsPixmapItem *parent, int id, bool state, int m_x, int m_y, Commons::Color team, Commons::Sizes size, float linear_speed, float theta_speed)
     :QObject(), QGraphicsPixmapItem(parent), id(id), state(state), m_x(m_x), m_y(m_y), team(team), size(size), linear_speed(linear_speed), theta_speed(theta_speed) {
 
     QString tmp = "";
 
-    if (team == RobotTeamColor::BLUE) {
+    if (team == Commons::BLUE) {
 
         tmp = (":/img/robots/blue_")
                 + QString::number(this->size)
@@ -14,7 +14,7 @@ Robot::Robot(QGraphicsPixmapItem *parent, int id, bool state, int m_x, int m_y, 
                 + QString(".png");
 
 
-    } else if (team == RobotTeamColor::YELLOW) {
+    } else if (team == Commons::YELLOW) {
 
         tmp = QString(":/img/robots/yellow_")
                 + QString::number(this->size)
@@ -63,11 +63,11 @@ void Robot::move() {
 
     if (this->state) {
 
-        if (this->m_x < (Ui::FIELD_PLAYABLE_WIDTH - this->size / 2) && this->m_x > ((Ui::FIELD_PLAYABLE_WIDTH - Ui::FIELD_PLAYABLE_WIDTH) + this->size)) {
-            this->m_x += (round(qCos(this->theta_speed)) * this->linear_speed);
+        if (this->m_x < (Commons::FIELD_PLAYABLE_WIDTH - this->size / 2) && this->m_x > ((Commons::FIELD_PLAYABLE_WIDTH - Commons::FIELD_PLAYABLE_WIDTH) + this->size)) {
+            this->m_x += (round(cos(this->theta_speed)) * this->linear_speed);
         }
-        if (this->m_y < (Ui::FIELD_PLAYABLE_HEIGHT - this->size / 2) && this->m_y > ((Ui::FIELD_PLAYABLE_HEIGHT - Ui::FIELD_PLAYABLE_HEIGHT) + this->size)) {
-            this->m_y += (round(qSin(qDegreesToRadians(this->theta_speed))) * this->linear_speed);
+        if (this->m_y < (Commons::FIELD_PLAYABLE_HEIGHT - this->size / 2) && this->m_y > ((Commons::FIELD_PLAYABLE_HEIGHT - Commons::FIELD_PLAYABLE_HEIGHT) + this->size)) {
+            this->m_y += (round(sin(this->theta_speed)) * this->linear_speed);
         }
 
         setPos(this->m_x, this->m_y);

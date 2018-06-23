@@ -6,7 +6,7 @@
 #include <string>
 #include <QString>
 
-#include "Commons.h"
+#include "../commons.h"
 
 class Ball : public QObject, public QGraphicsPixmapItem {
 
@@ -19,9 +19,9 @@ private:
 public:
 
     int x, y, speed;
-    Sizes size = Sizes::MEDIUM;
+    Commons::Sizes size = Commons::MEDIUM;
 
-    Ball(QGraphicsPixmapItem *parent = 0, int id = 0, int x = 0, int y = 0, int speed = 0, Sizes size = Sizes::VERY_SMALL);
+    Ball(QGraphicsPixmapItem *parent = 0, int id = 0, int x = 0, int y = 0, int speed = 0, Commons::Sizes size = Commons::VERY_SMALL);
     ~Ball();
 
 
