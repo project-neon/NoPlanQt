@@ -4,6 +4,8 @@
 #include <QHash>
 #include <QTextStream>
 #include <play/simplePlay.cpp>
+#include "ui/MainWindow.h"
+
 
 QTextStream out(stdout);
 
@@ -107,13 +109,15 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     SSLVisionClientThread vision_thread;
     vision_thread.start();
+    MainWindow w;
+    w.show();
 
     DummyMatch my_match = DummyMatch();
     DummyCoach my_coach = DummyCoach();
     my_match.define_coach(&my_coach, &vision_thread.detection);
-    while (true)
-    {
-        my_match.loop(&vision_thread.detection);
-    }
-
+//    while (true)
+//    {
+//        my_match.loop(&vision_thread.detection);
+//    }
+    return app.exec();
 }
