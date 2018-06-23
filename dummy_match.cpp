@@ -103,6 +103,7 @@ public:
 
 int main(int argc, char **argv)
 {
+
     QApplication app(argc, argv);
     SSLVisionClientThread vision_thread;
     vision_thread.start();
@@ -114,4 +115,5 @@ int main(int argc, char **argv)
     {
         my_match.loop(&vision_thread.detection);
     }
+
 }
