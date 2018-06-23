@@ -4,6 +4,7 @@
 #include <QList>
 
 class PointIntetion : Intetion {
+public:
     Vector2 target;
     float radius;
 

@@ -33,7 +33,8 @@ SOURCES += \
     play/simplePlay.cpp \
     dummy_match.cpp \
     intention/PointIntetion.cpp \
-    math/vector2.cpp
+    math/vector2.cpp \
+    coach/dummy_position.cpp
 
 SUBDIRS += \
     noPlan.pro

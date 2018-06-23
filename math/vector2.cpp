@@ -58,10 +58,10 @@ static float angle(Vector2 v1) {
 }
 
 static Vector2 rotate(Vector2 v1, float theta) {
-    float current_theta = atan2(v1.X, v2.Y);
+    float current_theta = atan2(v1.X, v1.Y);
     float current_norm  = v1.Length();
 
-    Vector2 vect = Vector2.fromTheta(current_theta + theta);
+    Vector2 vect = fromTheta(current_theta + theta);
 
-    return Vector2.mult(vect, current_norm);
+    return mult(vect, current_norm);
 }

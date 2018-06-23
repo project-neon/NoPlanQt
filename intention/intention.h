@@ -29,7 +29,7 @@ public:
             target_speed_vector = Vector2::mult(target_speed_vector.Normalize(), this->MAX_ROBOT_SPEED);
         }
 
-        Vector2 robot_world_speed = Vector2.rotate(target_speed_vector, -orientation);
+        Vector2 robot_world_speed = Vector2::rotate(target_speed_vector, -orientation);
 
         float linear = robot_world_speed.X;
 
@@ -38,7 +38,7 @@ public:
             robot_world_speed.X = -robot_world_speed.X;
         }
 
-        float robot_angle_to_speed = -Vector2.angle(robot_world_speed);
+        float robot_angle_to_speed = -Vector2::angle(robot_world_speed);
 
         float speed_weight = 0.5f;
         float v_theta_weight = 0.5f;
