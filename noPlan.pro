@@ -2,7 +2,7 @@ QT += gui
 
 CONFIG += c++11 console
 
- QT += widgets
+QT += widgets
 
 LIBS += -lprotobuf
 # The following define makes your compiler emit warnings if you use
