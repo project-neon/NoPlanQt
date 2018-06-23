@@ -43,6 +43,7 @@ public:
 
 class Position{
 public:
+    Position(){}
     string name = "dumbPosition";
     RobotTask calculate(SSL_DetectionRobot *robot, QHash<int, SSL_DetectionRobot> *our_robots,
                         QList<SSL_DetectionRobot> *their_robots, SSL_DetectionBall *ball){

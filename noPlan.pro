@@ -34,7 +34,47 @@ SOURCES += \
     dummy_match.cpp \
     intention/PointIntetion.cpp \
     math/vector2.cpp \
-    coach/dummy_position.cpp
+    coach/dummy_position.cpp \
+    coach/coach.cpp \
+    coach/dummy_position.cpp \
+    detection/data_manager.cpp \
+    detection/netraw.cpp \
+    detection/noplan_detection.cpp \
+    detection/robocup_ssl_client.cpp \
+    intention/PointIntetion.cpp \
+    match/match.cpp \
+    math/vector2.cpp \
+    play/simplePlay.cpp \
+    proto/messages_robocup_ssl_detection.pb.cc \
+    proto/messages_robocup_ssl_geometry.pb.cc \
+    proto/messages_robocup_ssl_geometry_legacy.pb.cc \
+    proto/messages_robocup_ssl_refbox_log.pb.cc \
+    proto/messages_robocup_ssl_wrapper.pb.cc \
+    proto/messages_robocup_ssl_wrapper_legacy.pb.cc \
+    ui/main.cpp \
+    ui/MainWindow.cpp \
+    dummy_match.cpp \
+    main.cpp \
+    coach/coach.cpp \
+    coach/dummy_position.cpp \
+    detection/data_manager.cpp \
+    detection/netraw.cpp \
+    detection/noplan_detection.cpp \
+    detection/robocup_ssl_client.cpp \
+    intention/PointIntetion.cpp \
+    match/match.cpp \
+    math/vector2.cpp \
+    play/simplePlay.cpp \
+    proto/messages_robocup_ssl_detection.pb.cc \
+    proto/messages_robocup_ssl_geometry.pb.cc \
+    proto/messages_robocup_ssl_geometry_legacy.pb.cc \
+    proto/messages_robocup_ssl_refbox_log.pb.cc \
+    proto/messages_robocup_ssl_wrapper.pb.cc \
+    proto/messages_robocup_ssl_wrapper_legacy.pb.cc \
+    ui/main.cpp \
+    ui/MainWindow.cpp \
+    dummy_match.cpp \
+    main.cpp
 
 SUBDIRS += \
     noPlan.pro
@@ -68,4 +108,47 @@ HEADERS += \
     player.h \
     intention/intention.h \
     math/vector2.h \
+    stdafx.h \
+    coach/coach.h \
+    detection/data_manager.h \
+    detection/netraw.h \
+    detection/noplan_detection.h \
+    detection/robocup_ssl_client.h \
+    detection/util.h \
+    intention/intention.h \
+    match/match.h \
+    math/vector2.h \
+    proto/messages_robocup_ssl_detection.pb.h \
+    proto/messages_robocup_ssl_geometry.pb.h \
+    proto/messages_robocup_ssl_geometry_legacy.pb.h \
+    proto/messages_robocup_ssl_refbox_log.pb.h \
+    proto/messages_robocup_ssl_wrapper.pb.h \
+    proto/messages_robocup_ssl_wrapper_legacy.pb.h \
+    transmission/transmission.h \
+    ui/MainWindow.h \
+    commons.h \
+    player.h \
+    stdafx.h \
+    coach/coach.h \
+    detection/data_manager.h \
+    detection/netraw.h \
+    detection/noplan_detection.h \
+    detection/robocup_ssl_client.h \
+    detection/util.h \
+    intention/intention.h \
+    match/match.h \
+    math/vector2.h \
+    proto/messages_robocup_ssl_detection.pb.h \
+    proto/messages_robocup_ssl_geometry.pb.h \
+    proto/messages_robocup_ssl_geometry_legacy.pb.h \
+    proto/messages_robocup_ssl_refbox_log.pb.h \
+    proto/messages_robocup_ssl_wrapper.pb.h \
+    proto/messages_robocup_ssl_wrapper_legacy.pb.h \
+    transmission/transmission.h \
+    ui/MainWindow.h \
+    commons.h \
+    player.h \
     stdafx.h
+
+FORMS += \
+    ui/MainWindow.ui

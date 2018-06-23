@@ -5,10 +5,10 @@
 class DummyPosition: public Position {
 
 
-    PointIntetion to_center_field;
+//    PointIntetion to_center_field;
 
     DummyPosition(){
-        PointIntetion to_center_field = PointIntetion("to_center_field", 1.f, Vector2(0.f, 0.f), 1000);
+//        PointIntetion to_center_field = PointIntetion("to_center_field", 1.f, Vector2(0.f, 0.f), 1000);
     }
 
     RobotTask calculate(SSL_DetectionRobot *robot, QHash<int, SSL_DetectionRobot> *our_robots,
