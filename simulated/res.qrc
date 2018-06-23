@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/img/robots">
+        <file>yellow_1024x1024.png</file>
+        <file>yellow_512x512.png</file>
+        <file>yellow_256x256.png</file>
+        <file>yellow_128x128.png</file>
+        <file>yellow_64x64.png</file>
+        <file>yellow_32x32.png</file>
+        <file>blue_1024x1024.png</file>
+        <file>blue_512x512.png</file>
+        <file>blue_256x256.png</file>
+        <file>blue_128x128.png</file>
+        <file>blue_64x64.png</file>
+        <file>blue_32x32.png</file>
+    </qresource>
+    <qresource prefix="/img/fields">
+        <file>field.svg</file>
+        <file>field.png</file>
+    </qresource>
+    <qresource prefix="/img/balls">
+        <file>ball_1024x1024.png</file>
+        <file>ball_512x512.png</file>
+        <file>ball_256x256.png</file>
+        <file>ball_128x128.png</file>
+        <file>ball_64x64.png</file>
+        <file>ball_32x32.png</file>
+    </qresource>
+    <qresource prefix="/img/ui">
+        <file>grey_panel.png</file>
+        <file>grey_box.png</file>
+        <file>green_panel.png</file>
+        <file>green_cross.png</file>
+        <file>green_button04.png</file>
+        <file>green_boxCheckmark.png</file>
+        <file>grey_background.png</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>kenvector_future.ttf</file>
+    </qresource>
+</RCC>
