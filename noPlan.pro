@@ -33,15 +33,15 @@ SOURCES += \
     proto/messages_robocup_ssl_refbox_log.pb.cc \
     proto/messages_robocup_ssl_wrapper.pb.cc \
     proto/messages_robocup_ssl_wrapper_legacy.pb.cc \
-    simulated/Ball.cpp \
-    simulated/Field.cpp \
     simulated/main.cpp \
-    simulated/Robot.cpp \
-    simulated/SimulatedMatch.cpp \
     ui/main.cpp \
     ui/MainWindow.cpp \
     dummy_match.cpp \
-    main.cpp
+    main.cpp \
+    simulated/ball.cpp \
+    simulated/field.cpp \
+    simulated/robot.cpp \
+    simulated/simulatedMatch.cpp
 
 SUBDIRS += \
     noPlan.pro
@@ -72,21 +72,18 @@ HEADERS += \
     proto/messages_robocup_ssl_refbox_log.pb.h \
     proto/messages_robocup_ssl_wrapper.pb.h \
     proto/messages_robocup_ssl_wrapper_legacy.pb.h \
-    simulated/Ball.h \
-    simulated/Commons.h \
-    simulated/Field.h \
-    simulated/Robot.h \
-    simulated/SimulatedMatch.h \
     transmission/transmission.h \
     ui/MainWindow.h \
     commons.h \
     player.h \
-    stdafx.h
-
+    stdafx.h \
+    simulated/ball.h \
+    simulated/field.h \
+    simulated/robot.h \
+    simulated/simulatedMatch.h
 
 FORMS += \
         ui/MainWindow.ui
 
 RESOURCES += \
-    ui/Ui.qrc \
-    simulated/res.qrc
+    res.qrc

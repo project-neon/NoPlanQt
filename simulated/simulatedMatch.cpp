@@ -1,45 +1,31 @@
-#include "SimulatedMatch.h"
+#include "simulatedMatch.h"
 
 Field *field;
 
 SimulatedMatch::SimulatedMatch(QWidget *parent)
     : QGraphicsView(parent) {
 
+    //match control variables
     this->right_side_score = 0;
     this->left_side_score  = 0;
 
     this->team_in_left_side  = Commons::BLUE;
     this->team_in_right_side = Commons::YELLOW;
 
-
-    //Setting up the view and scene.
-
+    //scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0, 0, Commons::WINDOW_WIDTH, Commons::WINDOW_HEIGHT);
-    setScene(scene);
-    setWindowTitle("Partida Simulada - Project Neon");
 
-    //Setting up the field
-
+    //field
     field = new Field(0, 0, 0, Commons::MATCH_FIELD_WIDTH, Commons::MATCH_FIELD_HEIGHT);
     scene->addItem(field);
 
-    //Setting up the view
-
+    //view
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(Commons::WINDOW_WIDTH, Commons::WINDOW_HEIGHT);
-
-    //Seting up the control panel
-
-    //Panel - Grey rectangle(300,990) that serve as background to the components of the control panel.
-    QGraphicsRectItem *control_panel_background = new QGraphicsRectItem(Commons::MATCH_FIELD_WIDTH, 0, Commons::CONTROL_PANEL_WIDTH, Commons::CONTROL_PANEL_HEIGHT);
-    control_panel_background->setBrush(QBrush(QImage(":/img/ui/grey_background.png")));
-    scene->addItem(control_panel_background);
-
-
-
-
+    setScene(scene);
+    setWindowTitle("Partida Simulada - Project Neon");
 
 }
 
@@ -102,6 +88,7 @@ void SimulatedMatch::invert_team_side() {
     this->team_in_right_side = tmp;
 
     qDebug() << "Lados invertidos. Time no lado esquerdo: " << team_in_left_side << "| Time do lado direito: " << team_in_right_side;
+
 }
 
 void SimulatedMatch::add_ball(Ball *ball) {

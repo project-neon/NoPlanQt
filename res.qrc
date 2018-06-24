@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/img/robots">
+        <file>resources/yellow_1024x1024.png</file>
+        <file>resources/yellow_512x512.png</file>
+        <file>resources/yellow_256x256.png</file>
+        <file>resources/yellow_128x128.png</file>
+        <file>resources/yellow_64x64.png</file>
+        <file>resources/yellow_32x32.png</file>
+        <file>resources/blue_1024x1024.png</file>
+        <file>resources/blue_512x512.png</file>
+        <file>resources/blue_256x256.png</file>
+        <file>resources/blue_128x128.png</file>
+        <file>resources/blue_64x64.png</file>
+        <file>resources/blue_32x32.png</file>
+    </qresource>
+    <qresource prefix="/img/fields">
+        <file>resources/field.svg</file>
+        <file>resources/field.png</file>
+    </qresource>
+    <qresource prefix="/img/balls">
+        <file>resources/ball_32x32.png</file>
+        <file>resources/ball_64x64.png</file>
+        <file>resources/ball_128x128.png</file>
+        <file>resources/ball_256x256.png</file>
+        <file>resources/ball_512x512.png</file>
+        <file>resources/ball_1024x1024.png</file>
+    </qresource>
+    <qresource prefix="/img/ui">
+        <file>resources/grey_arrowUpGrey.png</file>
+        <file>resources/grey_arrowDownGrey.png</file>
+    </qresource>
+</RCC>

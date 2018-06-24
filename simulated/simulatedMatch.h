@@ -14,9 +14,9 @@
 #include <QTextStream>
 #include <QPushButton>
 
-#include "Field.h"
-#include "Robot.h"
-#include "Ball.h"
+#include "field.h"
+#include "robot.h"
+#include "ball.h"
 
 class SimulatedMatch : public QGraphicsView {
 

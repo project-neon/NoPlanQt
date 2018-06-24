@@ -1,12 +1,13 @@
-#ifndef MATCH_H
-#define MATCH_H
+#pragma once
+
 #include "commons.h"
 #include "coach/coach.h"
 #include "detection/data_manager.h"
 
-class Match
-{
+class Match {
+
 public:
+
     // Cor no nosso time
     Commons::Color team_color = Commons::YELLOW;
     // Implementação do coach
@@ -18,6 +19,5 @@ public:
     virtual void setup()=0;
     // Define o coach e já faz inicialização se preciso
     virtual void define_coach(Coach *coach, noplan_detection *detection)=0;
-};
 
-#endif // MATCH_H
+};

@@ -4,8 +4,8 @@
 #include <QTimer>
 #include <QThread>
 
-#include "SimulatedMatch.h"
-#include "Robot.h"
+#include "simulatedMatch.h"
+#include "robot.h"
 #include "Commons.h"
 
 SimulatedMatch *match;

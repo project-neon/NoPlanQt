@@ -1,13 +1,15 @@
-#ifndef DATA_MANAGER_H
-#define DATA_MANAGER_H
-#include "noplan_detection.h"
-#include "commons.h"
+#pragma once
+
 #include <QThread>
 
-class SSLVisionClientThread : public QThread
-{
+#include "noplan_detection.h"
+#include "commons.h"
+
+class SSLVisionClientThread : public QThread {
+
 protected:
     void run();
+
 public:
     SSLVisionClientThread(QObject* parent = 0){}
     ~SSLVisionClientThread(){}
@@ -22,5 +24,3 @@ public:
     void setTeamColor(Commons::Color color);
 
 };
-
-#endif // DATA_MANAGER_H

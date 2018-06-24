@@ -1097,7 +1097,7 @@ background-color:white;</string>
 QComboBox#cmb_side::drop-down::down-arrow{
 	subcontrol-origin: content;
 	subcontrol-position: right;
-	image: url(:/img/backgrounds/grey_arrowDownGrey.png);
+	image: url(:/img/ui/resources/grey_arrowDownGrey.png);
 	padding-right: 4px;
 }</string>
      </property>
@@ -1190,7 +1190,7 @@ QComboBox#cmb_side::drop-down::down-arrow{
 QComboBox#cmb_color::drop-down::down-arrow{
 	subcontrol-origin: content;
 	subcontrol-position: right;
-	image: url(:/img/backgrounds/grey_arrowDownGrey.png);
+	image: url(:/img/ui/resources/grey_arrowDownGrey.png);
 	padding-right: 4px;
 }</string>
      </property>

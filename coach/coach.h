@@ -1,28 +1,29 @@
-#ifndef COACH_H
-#define COACH_H
-#include "player.h"
-#include "detection/noplan_detection.h"
+#pragma once
+
 #include <vector>
 #include <QHash>
-#include "commons.h"
-
 #include <iostream>
 #include <QString>
 #include <QDebug>
 
-class RobotTask
-{
+#include "commons.h"
+#include "player.h"
+#include "detection/noplan_detection.h"
+
+class RobotTask {
+
 public:
+
     int robot_id;
     bool state;
     float linear_speed;
     float theta_speed;
 
     RobotTask(int robot_id, bool state, float linear_speed, float theta_speed) : robot_id(robot_id), state(state), linear_speed(linear_speed), theta_speed(theta_speed) {
-//        this->robot_id = robot_id;
-//        this->state = state;
-//        this->linear_speed = linear_speed;
-//        this->theta_speed = theta_speed;
+    //    this->robot_id = robot_id;
+    //    this->state = state;
+    //    this->linear_speed = linear_speed;
+    //    this->theta_speed = theta_speed;
     }
 
     void debug_message() {
@@ -41,9 +42,10 @@ public:
     }
 };
 
-class Position{
+class Position {
+
 public:
-    Position(){}
+    Position() {}
     string name = "dumbPosition";
     RobotTask calculate(SSL_DetectionRobot *robot, QHash<int, SSL_DetectionRobot> *our_robots,
                         QList<SSL_DetectionRobot> *their_robots, SSL_DetectionBall *ball){
@@ -60,9 +62,10 @@ public:
     virtual void delegate_roles(Coach *coach)=0;
 };
 
-class Coach
-{
+class Coach {
+
 public:
+
     virtual void send_transmission()=0;
     virtual void update(noplan_detection *detection, Commons::Color team_color)=0;
 
@@ -82,5 +85,5 @@ public:
     SSL_DetectionBall ball;
     // actual play that coach is considering
     Play *actual_play;
+
 };
-#endif // COACH_H

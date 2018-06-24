@@ -1,9 +1,9 @@
-#include "Ball.h"
+#include "ball.h"
 
-Ball::Ball(QGraphicsPixmapItem *parent, int id, int x, int y, int speed, Commons::Sizes size)
+Ball::Ball(QGraphicsPixmapItem *parent, int id, int x, int y, int speed, Commons::Size size)
     : QObject(), QGraphicsPixmapItem(parent), id(id), x(x), y(y), speed(speed), size(size) {
 
-    QString tmp = QString(":/img/balls/ball_")
+    QString tmp = QString(":/img/balls/resources/ball_")
             + QString::number(this->size)
             + QString("x")
             + QString::number(this->size)

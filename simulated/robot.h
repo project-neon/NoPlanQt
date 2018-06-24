@@ -34,13 +34,13 @@ public:
     int m_y;
 
     Commons::Color team;
-    Commons::Sizes size;
+    Commons::Size size;
 
     float linear_speed;
     float theta_speed;
 
 
-    Robot(QGraphicsPixmapItem *parent = 0, int id = 0, bool state = 0, int m_x = 0, int m_y = 0, Commons::Color team = Commons::BLUE, Commons::Sizes size = Commons::VERY_SMALL, float linear_speed = 0, float theta_speed = 0);
+    Robot(QGraphicsPixmapItem *parent = 0, int id = 0, bool state = 0, int m_x = 0, int m_y = 0, Commons::Color team = Commons::BLUE, Commons::Size size = Commons::VERY_SMALL, float linear_speed = 0, float theta_speed = 0);
     ~Robot();
 
     int get_id() const;

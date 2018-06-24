@@ -1,26 +1,29 @@
-#ifndef COMMONS_H
-#define COMMONS_H
+#pragma once
 
-class Commons
-{
+class Commons {
+
 public:
+
     // RIGHT: do not reverse the coordinates
     // LEFT: reverse the coordinates
-    enum FieldSide {RIGHT, LEFT};
-    enum Color {YELLOW, BLUE};
-    enum Sizes {
-
+    enum FieldSide {
+        RIGHT,
+        LEFT
+    };
+    enum Color {
+        YELLOW,
+        BLUE
+    };
+    enum Size {
         SUPER_VERY_SMALL    = 32, //MELHORAR ESSE NOME
         VERY_SMALL          = 64,
         SMALL               = 128,
         MEDIUM              = 256,
         LARGE               = 512,
         VERY_LARGE          = 1024
-
     };
 
     enum Ui {
-
         WINDOW_WIDTH          = 1600,
         WINDOW_HEIGHT         = 990,
         MATCH_FIELD_WIDTH     = 1290,
@@ -31,8 +34,5 @@ public:
         LEFT_SIDE_GOAL_LINE   = 117,
         CONTROL_PANEL_WIDTH   = 310,
         CONTROL_PANEL_HEIGHT  = 990,
-
     };
 };
-
-#endif // COMMONS_H

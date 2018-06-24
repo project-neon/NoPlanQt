@@ -1,15 +1,14 @@
-#ifndef INTENTION_H
-#define INTENTION_H
+#pragma once
+
+#include <QString>
+#include <math/vector2.h>
 
 #include "coach/coach.h"
 
-#include <QString>
+class Intetion {
 
-#include <math/vector2.h>
-
-
-class Intetion{
 public:
+
     QString name;
     float weight;
 
@@ -50,5 +49,3 @@ public:
     }
 
 };
-
-#endif

@@ -3,19 +3,14 @@
 Vector2::Vector2(void) {}
 
 Vector2::Vector2(float X, float Y) {
-
     this->X = X;
     this->Y = Y;
-
 }
 
 float Vector2::Length() {
-
     return sqrt(X * X + Y * Y);
-
 }
 
-// Normalizes the vector
 Vector2 Vector2::Normalize() {
 
     Vector2 vector;

@@ -1,13 +1,13 @@
-#include "Robot.h"
+#include "robot.h"
 
-Robot::Robot(QGraphicsPixmapItem *parent, int id, bool state, int m_x, int m_y, Commons::Color team, Commons::Sizes size, float linear_speed, float theta_speed)
+Robot::Robot(QGraphicsPixmapItem *parent, int id, bool state, int m_x, int m_y, Commons::Color team, Commons::Size size, float linear_speed, float theta_speed)
     :QObject(), QGraphicsPixmapItem(parent), id(id), state(state), m_x(m_x), m_y(m_y), team(team), size(size), linear_speed(linear_speed), theta_speed(theta_speed) {
 
     QString tmp = "";
 
     if (team == Commons::BLUE) {
 
-        tmp = (":/img/robots/blue_")
+        tmp = (":/img/robots/resources/blue_")
                 + QString::number(this->size)
                 + QString("x")
                 + QString::number(this->size)
@@ -16,7 +16,7 @@ Robot::Robot(QGraphicsPixmapItem *parent, int id, bool state, int m_x, int m_y, 
 
     } else if (team == Commons::YELLOW) {
 
-        tmp = QString(":/img/robots/yellow_")
+        tmp = QString(":/img/robots/resources/yellow_")
                 + QString::number(this->size)
                 + QString("x")
                 + QString::number(this->size)
@@ -24,7 +24,7 @@ Robot::Robot(QGraphicsPixmapItem *parent, int id, bool state, int m_x, int m_y, 
 
     } else {
 
-        tmp = QString(":/img/robots/unknow_")
+        tmp = QString(":/img/robots/resources/unknow_")
                 + QString::number(this->size)
                 + QString("x")
                 + QString::number(this->size)
@@ -55,6 +55,7 @@ void Robot::update(int id, bool state, float linear_speed, float theta_speed) {
     this->state         = state;
     this->linear_speed  = linear_speed;
     this->theta_speed   = theta_speed;
+
 }
 
 void Robot::move() {
@@ -72,10 +73,6 @@ void Robot::move() {
 
         setPos(this->m_x, this->m_y);
 
-    } else {
-
-        /*qDebug() << "I can't move sir, help me, am I dying? Please, I don't wanna die. Robot " << this->get_id()
-                 << " is dying, err... inative.";*/
     }
 
 }

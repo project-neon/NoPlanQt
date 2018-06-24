@@ -1,7 +1,7 @@
 #include <QFont>
 #include <QFontDatabase>
 
-#include <simulated/SimulatedMatch.h>
+#include <simulated/simulatedMatch.h>
 
 #include "MainWindow.h"
 #include "ui_MainWindow.h"

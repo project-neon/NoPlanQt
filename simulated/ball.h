@@ -19,9 +19,9 @@ private:
 public:
 
     int x, y, speed;
-    Commons::Sizes size = Commons::MEDIUM;
+    Commons::Size size = Commons::MEDIUM;
 
-    Ball(QGraphicsPixmapItem *parent = 0, int id = 0, int x = 0, int y = 0, int speed = 0, Commons::Sizes size = Commons::VERY_SMALL);
+    Ball(QGraphicsPixmapItem *parent = 0, int id = 0, int x = 0, int y = 0, int speed = 0, Commons::Size size = Commons::VERY_SMALL);
     ~Ball();
 
 
