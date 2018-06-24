@@ -13,7 +13,7 @@ class Field : public QObject, public QGraphicsPixmapItem {
 public:
 
     int x, y;
-    int real_width, real_heigth, scale;
+    int real_width, real_heigth, m_scale;
 
     Field(QGraphicsItem *parent = 0);
     Field(QGraphicsItem *parent = 0, int x = 0, int y = 0, int real_width = 1700, int real_heigth = 1300);

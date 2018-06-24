@@ -42,8 +42,24 @@ Robot::Robot(QGraphicsPixmapItem *parent, int id, bool state, int m_x, int m_y, 
     setPixmap(QPixmap(tmp));
     setTransformOriginPoint(this->size / 2, this->size / 2);
     setRotation(this->theta_speed);
-    setPos(this->m_x, this->m_y);
 
+    if (this->m_x > Commons::FIELD_PLAYABLE_WIDTH - this->size / 2) {
+        this->m_x = this->m_x - (Commons::FIELD_PLAYABLE_WIDTH - (this->m_x + this->size / 2));
+    } else if (this->m_x < (Commons::MATCH_FIELD_WIDTH - (Commons::FIELD_PLAYABLE_WIDTH + this->size / 2))) {
+        this->m_x = Commons::FIELD_PLAYABLE_WIDTH + this->size / 2;
+    } else {
+        this->m_y = this->m_y;
+    }
+
+    if (this->m_y > Commons::FIELD_PLAYABLE_HEIGHT - this->size / 2) {
+        this->m_y = this->m_y - (Commons::FIELD_PLAYABLE_HEIGHT - (this->m_y + this->size / 2));
+    } else if (this->m_y < (Commons::MATCH_FIELD_HEIGHT - (Commons::FIELD_PLAYABLE_HEIGHT + this->size / 2))) {
+        this->m_y = Commons::FIELD_PLAYABLE_HEIGHT + this->size / 2;
+    } else {
+        this->m_y = this->m_y;
+    }
+
+    setPos(this->m_x, this->m_y);
 }
 
 Robot::~Robot() {}
@@ -64,10 +80,10 @@ void Robot::move() {
 
     if (this->state) {
 
-        if (this->m_x < (Commons::FIELD_PLAYABLE_WIDTH - this->size / 2) && this->m_x > ((Commons::FIELD_PLAYABLE_WIDTH - Commons::FIELD_PLAYABLE_WIDTH) + this->size)) {
+        if (this->m_x < (Commons::FIELD_PLAYABLE_WIDTH - this->size / 2) && this->m_x > ((Commons::MATCH_FIELD_WIDTH - Commons::FIELD_PLAYABLE_WIDTH) + this->size)) {
             this->m_x += (round(cos(this->theta_speed)) * this->linear_speed);
         }
-        if (this->m_y < (Commons::FIELD_PLAYABLE_HEIGHT - this->size / 2) && this->m_y > ((Commons::FIELD_PLAYABLE_HEIGHT - Commons::FIELD_PLAYABLE_HEIGHT) + this->size)) {
+        if (this->m_y < (Commons::FIELD_PLAYABLE_HEIGHT - this->size / 2) && this->m_y > ((Commons::MATCH_FIELD_HEIGHT - Commons::FIELD_PLAYABLE_HEIGHT) + this->size)) {
             this->m_y += (round(sin(this->theta_speed)) * this->linear_speed);
         }
 

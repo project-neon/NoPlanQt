@@ -24,15 +24,11 @@ public:
     };
 
     enum Ui {
-        WINDOW_WIDTH          = 1600,
-        WINDOW_HEIGHT         = 990,
-        MATCH_FIELD_WIDTH     = 1290,
-        MATCH_FIELD_HEIGHT    = 990,
-        FIELD_PLAYABLE_WIDTH  = 1045,
-        FIELD_PLAYABLE_HEIGHT = 884,
-        RIGHT_SIDE_GOAL_LINE  = 1170,
-        LEFT_SIDE_GOAL_LINE   = 117,
-        CONTROL_PANEL_WIDTH   = 310,
-        CONTROL_PANEL_HEIGHT  = 990,
+        WINDOW_WIDTH          = 691,
+        WINDOW_HEIGHT         = 461,
+        MATCH_FIELD_WIDTH     = 691,
+        MATCH_FIELD_HEIGHT    = 461,
+        FIELD_PLAYABLE_WIDTH  = 564,
+        FIELD_PLAYABLE_HEIGHT = 410,
     };
 };

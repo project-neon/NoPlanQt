@@ -35,11 +35,11 @@ SimulatedMatch::~SimulatedMatch() {
 }
 
 int SimulatedMatch::translate_position_x(int x) {
-   return x * field->scale + Commons::FIELD_PLAYABLE_WIDTH / 2;
+   return x * field->m_scale + Commons::FIELD_PLAYABLE_WIDTH / 2;
 }
 
 int SimulatedMatch::translate_position_y(int y) {
-    return y * field->scale + Commons::FIELD_PLAYABLE_HEIGHT / 2;
+    return y * field->m_scale + Commons::FIELD_PLAYABLE_HEIGHT / 2;
 }
 
 void SimulatedMatch::update(QString message) {}

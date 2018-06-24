@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1379</width>
-    <height>922</height>
+    <width>1410</width>
+    <height>999</height>
    </rect>
   </property>
   <property name="font">
@@ -29,9 +29,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>630</y>
-      <width>1361</width>
-      <height>281</height>
+      <y>730</y>
+      <width>1391</width>
+      <height>261</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -41,7 +41,7 @@
    <widget class="QLabel" name="lbl_timer">
     <property name="geometry">
      <rect>
-      <x>1260</x>
+      <x>1290</x>
       <y>0</y>
       <width>111</width>
       <height>51</height>
@@ -63,9 +63,9 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>1070</x>
+      <x>1100</x>
       <y>0</y>
-      <width>161</width>
+      <width>191</width>
       <height>51</height>
      </rect>
     </property>
@@ -94,7 +94,7 @@ color: white;
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>371</width>
+      <width>381</width>
       <height>51</height>
      </rect>
     </property>
@@ -121,10 +121,10 @@ color: white;
    <widget class="QGroupBox" name="gpb_postions">
     <property name="geometry">
      <rect>
-      <x>1070</x>
-      <y>80</y>
+      <x>1100</x>
+      <y>60</y>
       <width>301</width>
-      <height>501</height>
+      <height>621</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -398,9 +398,9 @@ border: 1px solid #2AC652;</string>
    <widget class="QGroupBox" name="gpb_robot1">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>370</y>
-      <width>201</width>
+      <x>400</x>
+      <y>470</y>
+      <width>231</width>
       <height>211</height>
      </rect>
     </property>
@@ -443,7 +443,7 @@ border: 1px solid #2AC652;</string>
       <rect>
        <x>83</x>
        <y>60</y>
-       <width>101</width>
+       <width>131</width>
        <height>31</height>
       </rect>
      </property>
@@ -459,7 +459,7 @@ border: 1px solid #2AC652;</string>
       <rect>
        <x>83</x>
        <y>110</y>
-       <width>101</width>
+       <width>131</width>
        <height>31</height>
       </rect>
      </property>
@@ -475,7 +475,7 @@ border: 1px solid #2AC652;</string>
       <rect>
        <x>83</x>
        <y>160</y>
-       <width>101</width>
+       <width>131</width>
        <height>31</height>
       </rect>
      </property>
@@ -573,9 +573,9 @@ Tag</string>
    <widget class="QGroupBox" name="gpb_robot2">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>370</y>
-      <width>201</width>
+      <x>640</x>
+      <y>470</y>
+      <width>221</width>
       <height>211</height>
      </rect>
     </property>
@@ -589,7 +589,7 @@ border: 1px solid #2AC652;</string>
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>80</x>
        <y>20</y>
        <width>81</width>
        <height>16</height>
@@ -615,7 +615,7 @@ border: 1px solid #2AC652;</string>
       <rect>
        <x>83</x>
        <y>60</y>
-       <width>101</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -631,7 +631,7 @@ border: 1px solid #2AC652;</string>
       <rect>
        <x>83</x>
        <y>110</y>
-       <width>101</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -647,7 +647,7 @@ border: 1px solid #2AC652;</string>
       <rect>
        <x>83</x>
        <y>160</y>
-       <width>101</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -745,9 +745,9 @@ Tag</string>
    <widget class="QGroupBox" name="gpb_robot3">
     <property name="geometry">
      <rect>
-      <x>830</x>
-      <y>370</y>
-      <width>201</width>
+      <x>870</x>
+      <y>470</y>
+      <width>221</width>
       <height>211</height>
      </rect>
     </property>
@@ -761,7 +761,7 @@ border: 1px solid #2AC652;</string>
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>90</x>
        <y>20</y>
        <width>81</width>
        <height>16</height>
@@ -787,7 +787,7 @@ border: 1px solid #2AC652;</string>
       <rect>
        <x>83</x>
        <y>60</y>
-       <width>101</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -803,7 +803,7 @@ border: 1px solid #2AC652;</string>
       <rect>
        <x>83</x>
        <y>110</y>
-       <width>101</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -819,7 +819,7 @@ border: 1px solid #2AC652;</string>
       <rect>
        <x>83</x>
        <y>160</y>
-       <width>101</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -918,9 +918,9 @@ Tag</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>70</y>
-      <width>391</width>
-      <height>511</height>
+      <y>60</y>
+      <width>381</width>
+      <height>621</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1122,7 +1122,7 @@ QComboBox#cmb_side::drop-down::down-arrow{
       <rect>
        <x>10</x>
        <y>80</y>
-       <width>51</width>
+       <width>111</width>
        <height>31</height>
       </rect>
      </property>
@@ -1145,9 +1145,9 @@ QComboBox#cmb_side::drop-down::down-arrow{
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>190</x>
        <y>80</y>
-       <width>61</width>
+       <width>111</width>
        <height>31</height>
       </rect>
      </property>
@@ -1165,13 +1165,13 @@ QComboBox#cmb_side::drop-down::down-arrow{
 </string>
      </property>
      <property name="text">
-      <string>Color</string>
+      <string>Team Color</string>
      </property>
     </widget>
     <widget class="QComboBox" name="cmb_color">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>190</x>
        <y>120</y>
        <width>171</width>
        <height>41</height>
@@ -1216,7 +1216,7 @@ QComboBox#cmb_color::drop-down::down-arrow{
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>90</x>
        <y>20</y>
        <width>181</width>
        <height>41</height>
@@ -1225,7 +1225,7 @@ QComboBox#cmb_color::drop-down::down-arrow{
      <property name="font">
       <font>
        <family>Source Code Pro</family>
-       <pointsize>14</pointsize>
+       <pointsize>16</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
@@ -1337,8 +1337,8 @@ QComboBox#cmb_color::drop-down::down-arrow{
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>600</y>
-      <width>81</width>
+      <y>700</y>
+      <width>91</width>
       <height>16</height>
      </rect>
     </property>
@@ -1357,10 +1357,10 @@ QComboBox#cmb_color::drop-down::down-arrow{
    <widget class="QGraphicsView" name="simulated_match">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>400</x>
       <y>0</y>
-      <width>621</width>
-      <height>361</height>
+      <width>691</width>
+      <height>461</height>
      </rect>
     </property>
    </widget>
