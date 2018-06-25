@@ -18,8 +18,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     Robot *robot1 = new Robot(0, 1, 1, 200, 100, Commons::BLUE, Commons::SUPER_VERY_SMALL, 41, 180);
     Ball *ball = new Ball(0, 32, 300, 150, 10, Commons::SUPER_VERY_SMALL);
 
-    match->scene->addItem(robot1);
-    match->scene->addItem(ball);
+    match->add_player(robot1);
+    match->add_ball(ball);
 
     ui->simulated_match->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     ui->simulated_match->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
