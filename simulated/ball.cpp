@@ -9,6 +9,10 @@ Ball::Ball(QGraphicsPixmapItem *parent, int id, int x, int y, int speed, Commons
             + QString::number(this->size)
             + QString(".png");
 
+    QTimer *timer = new QTimer();
+    connect(timer, SIGNAL(timeout()), this, SLOT(move()));
+    timer->start(Commons::TIME_TO_UPDATE);
+
     setPixmap(QPixmap(tmp));
     setTransformOriginPoint(this->size / 2, this->size / 2);
     setFlag(QGraphicsItem::ItemIsFocusable);
@@ -26,8 +30,10 @@ void Ball::update(int x, int y, int speed) {
     this->y += y;
     this->speed = speed;
 
-    setPos(this->x, this->y);
+}
 
+void Ball::move() {
+    setPos(this->x, this->y);
 }
 
 int Ball::get_id() const {

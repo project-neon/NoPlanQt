@@ -6,6 +6,10 @@ public:
 
     // RIGHT: do not reverse the coordinates
     // LEFT: reverse the coordinates
+    enum System {
+        TIME_TO_UPDATE = 50
+    };
+
     enum FieldSide {
         RIGHT,
         LEFT

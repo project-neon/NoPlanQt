@@ -5,20 +5,18 @@
 #include <QWidget>
 #include <QHash>
 #include <QHashIterator>
-#include <QString>
 #include <vector>
-#include <QBrush>
 #include <QImage>
-#include <QGraphicsRectItem>
 #include <QDebug>
 #include <QTextStream>
-#include <QPushButton>
+#include <QString>
 
 #include "field.h"
 #include "robot.h"
 #include "ball.h"
 
-class SimulatedMatch : public QGraphicsView {
+class SimulatedMatch : public QGraphicsView{
+
 
 public:
 
@@ -32,12 +30,14 @@ public:
 
     bool is_paused = false;
 
+    QString message = "";
+
     QHash<int, Robot *> players;
 
     SimulatedMatch(QWidget *parent = 0);
     ~SimulatedMatch();
 
-    void init();
+    void run();
     void add_player(Robot *robot);
     void add_ball(Ball *ball);
     void update(QString message);

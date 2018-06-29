@@ -3,8 +3,9 @@
 #include <QObject>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
-#include <string>
+#include <QTimer>
 #include <QString>
+#include <string>
 
 #include "../commons.h"
 
@@ -27,11 +28,12 @@ public:
 
     int get_id() const;
     void set_id(int id);
+    void update(int x = 0, int y = 0, int speed = 0);
 
 signals:
 
 public slots:
 
-    void update(int x = 0, int y = 0, int speed = 0);
+    void move();
 
 };

@@ -18,6 +18,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     Robot *robot1 = new Robot(0, 1, 1, 200, 100, Commons::BLUE, Commons::SUPER_VERY_SMALL, 41, 180);
     Ball *ball = new Ball(0, 32, 300, 150, 10, Commons::SUPER_VERY_SMALL);
 
+    match->update("1, 1, 20, 90");
+
+
     match->scene->addItem(robot1);
     match->scene->addItem(ball);
 

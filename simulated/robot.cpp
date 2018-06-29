@@ -34,8 +34,7 @@ Robot::Robot(QGraphicsPixmapItem *parent, int id, bool state, int m_x, int m_y, 
 
     QTimer *timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(move()));
-
-    timer->start(50);
+    timer->start(Commons::TIME_TO_UPDATE);
 
 
     setFlag(QGraphicsItem::ItemIsFocusable);

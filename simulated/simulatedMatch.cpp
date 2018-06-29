@@ -42,7 +42,25 @@ int SimulatedMatch::translate_position_y(int y) {
     return y * field->m_scale + Commons::FIELD_PLAYABLE_HEIGHT / 2;
 }
 
-void SimulatedMatch::update(QString message) {}
+void SimulatedMatch::update(QString message) {
+
+    QStringList data = message.split(";");
+
+    for (int i = 0; i < this->players.size(); i++) {
+
+        Robot *tmp = this->players.value(data[0].toInt());
+        tmp->state = data[1].toInt();
+        tmp->linear_speed = data[2].toFloat();
+        tmp->theta_speed = data[3].toInt();
+
+        data.removeAt(0);
+        data.removeAt(1);
+        data.removeAt(2);
+        data.removeAt(3);
+
+    }
+
+}
 
 void SimulatedMatch::update_score(Commons::Color team) {
 
@@ -98,3 +116,16 @@ void SimulatedMatch::add_ball(Ball *ball) {
 
 }
 
+/*void SimulatedMatch::run() {
+
+    QStringList data = this->message.split(";");
+
+    for (int i = 0; i < data.length(); i++) {
+
+        QStringList tmp_data = data[i].split(",");
+
+        this->players.value(tmp_data[0].toInt())->update(tmp_data[0].toInt(), tmp_data[1].toInt(), tmp_data[2].toFloat(), tmp_data[3].toFloat());
+
+    }
+
+}*/
