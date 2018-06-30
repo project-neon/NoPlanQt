@@ -16,7 +16,4 @@ public:
 
     std::vector<SSL_DetectionRobot> blue_robots;
     std::vector<SSL_DetectionRobot> yellow_robots;
-    std::vector<SSL_DetectionRobot> get_our_robots();
-    std::vector<SSL_DetectionRobot> get_foe_robots();
-
 };

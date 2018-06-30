@@ -10,8 +10,7 @@
 
 SimulatedMatch *match;
 
-
-class Teste : public QThread {
+class MatchThread : public QThread {
 
 protected:
     void run() {
@@ -20,12 +19,13 @@ protected:
 
 public:
     Robot *robot;
-    Teste(QObject *parent = 0) {}
+    MatchThread(QObject *parent = 0) {}
     void set_robot(Robot *robot) {
         this->robot = robot;
     }
 
 };
+
 int main(int argc, char *argv[]) {
 
     QApplication a(argc, argv);
@@ -46,9 +46,9 @@ int main(int argc, char *argv[]) {
     //robot6->config(Robot::RobotTeamColor::YELLOW, Sizes::VERY_SMALL);
 
     Ball *ball = new Ball(0, 32, 300, 150, 10, Sizes::VERY_SMALL);
-    Teste teste;
-    teste.start();
-    teste.set_robot(robot1);
+    MatchThread match_thread;
+    match_thread.start();
+    match_thread.set_robot(robot1);
 
     match->add_player(robot1);
     match->add_player(robot2);

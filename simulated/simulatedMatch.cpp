@@ -1,6 +1,37 @@
 #include "simulatedMatch.h"
 
+#include <detection/noplan_detection.h>
+
+#include <ui/MainWindow.h>
+
 Field *field;
+
+class UpdateUIThread : public QThread {
+
+protected:
+    void run() {
+        for (int i = 0; i < Commons::NUMBER_OF_ROBOTS; i++) {
+            //int robot_id = data[0].toInt();
+            //Robot *robot = this->players.value(robot_id);
+            // RODAR O ALGORITMO DE ESTRATEGIA E ENVIAR O RESULTADO PARA O UPDATE
+            //robot->update();
+        }
+        //this->robot->update(1, 1, 10, 90);
+    }
+
+public:
+    noplan_detection *detection;
+    MainWindow *ui;
+
+    UpdateUIThread(QThread *parent, noplan_detection *detection, MainWindow *ui)
+        : QThread(0), detection(detection), ui(ui){}
+
+    QHash<int, Robot *> players;
+
+    void set_robots(QHash<int, Robot *> players) {
+        this->players = players;
+    }
+};
 
 SimulatedMatch::SimulatedMatch(QWidget *parent)
     : QGraphicsView(parent) {

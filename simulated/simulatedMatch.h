@@ -11,10 +11,12 @@
 #include <QTextStream>
 #include <QString>
 #include <QStringList>
+#include <QThread>
 
 #include "field.h"
 #include "robot.h"
 #include "ball.h"
+
 
 class SimulatedMatch : public QGraphicsView{
 
