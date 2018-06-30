@@ -10,6 +10,7 @@
 #include <QDebug>
 #include <QTextStream>
 #include <QString>
+#include <QStringList>
 
 #include "field.h"
 #include "robot.h"

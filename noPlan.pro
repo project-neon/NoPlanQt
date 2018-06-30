@@ -41,7 +41,8 @@ SOURCES += \
     simulated/ball.cpp \
     simulated/field.cpp \
     simulated/robot.cpp \
-    simulated/simulatedMatch.cpp
+    simulated/simulatedMatch.cpp \
+    console.cpp
 
 SUBDIRS += \
     noPlan.pro
@@ -80,7 +81,8 @@ HEADERS += \
     simulated/ball.h \
     simulated/field.h \
     simulated/robot.h \
-    simulated/simulatedMatch.h
+    simulated/simulatedMatch.h \
+    console.h
 
 FORMS += \
         ui/MainWindow.ui

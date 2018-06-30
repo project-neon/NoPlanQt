@@ -43,12 +43,13 @@ int SimulatedMatch::translate_position_y(int y) {
 }
 
 void SimulatedMatch::update(QString message) {
-
+/*
     QStringList data = message.split(";");
 
-    for (int i = 0; i < this->players.size(); i++) {
+    for (int i = 0; i < Commons::NUMBER_OF_ROBOTS; i++) {
 
         Robot *tmp = this->players.value(data[0].toInt());
+
         tmp->state = data[1].toInt();
         tmp->linear_speed = data[2].toFloat();
         tmp->theta_speed = data[3].toInt();
@@ -58,7 +59,7 @@ void SimulatedMatch::update(QString message) {
         data.removeAt(2);
         data.removeAt(3);
 
-    }
+    }*/
 
 }
 

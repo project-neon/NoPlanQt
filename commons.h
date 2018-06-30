@@ -7,7 +7,8 @@ public:
     // RIGHT: do not reverse the coordinates
     // LEFT: reverse the coordinates
     enum System {
-        TIME_TO_UPDATE = 50
+        TIME_TO_UPDATE   = 50,
+        NUMBER_OF_ROBOTS = 3
     };
 
     enum FieldSide {
