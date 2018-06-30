@@ -23,6 +23,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     // Initial configs:
     this->team_color = static_cast<Commons::Color>(ui->cmb_color->currentIndex());
 
+    QString robot_data;
+
     match = new SimulatedMatch();
     QGraphicsScene* scene = match->scene;
 
@@ -50,10 +52,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 }
 
 void MainWindow::startRealMatch() {
+
     this->vision_thread = new SSLVisionClientThread();
     this->vision_thread->start();
-
-
 
 }
 

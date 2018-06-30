@@ -13,16 +13,18 @@
 #include <QStringList>
 #include <QThread>
 
+#include <detection/noplan_detection.h>
+
+#include <ui/MainWindow.h>
+
 #include "field.h"
 #include "robot.h"
 #include "ball.h"
-
 
 class SimulatedMatch : public QGraphicsView{
 
 
 public:
-
     QGraphicsScene *scene;
 
     int right_side_score;

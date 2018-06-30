@@ -35,6 +35,7 @@ SOURCES += \
     proto/messages_robocup_ssl_wrapper_legacy.pb.cc \
     simulated/main.cpp \
     ui/main.cpp \
+    simulated/UpdateUIThread.cpp \
     ui/MainWindow.cpp \
     dummy_match.cpp \
     main.cpp \
@@ -74,6 +75,7 @@ HEADERS += \
     proto/messages_robocup_ssl_wrapper.pb.h \
     proto/messages_robocup_ssl_wrapper_legacy.pb.h \
     transmission/transmission.h \
+    simulated/UpdateUIThread.h \
     ui/MainWindow.h \
     commons.h \
     player.h \

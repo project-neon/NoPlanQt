@@ -6,6 +6,8 @@
 
 #include <match/match.h>
 #include <detection/noplan_detection.h>
+#include <simulated/UpdateUIThread.h>
+#include <simulated/simulatedMatch.h>
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +22,8 @@ public slots:
 
 public:
     SSLVisionClientThread *vision_thread;
+
+    //UpdateUIThread *ui_thread;
 
     Commons::Color team_color;
 
